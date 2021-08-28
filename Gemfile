@@ -8,5 +8,3 @@ gem 'puma'
 group :development do
   gem 'listen'
 end
-
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

@@ -144,7 +144,6 @@ DEPENDENCIES
   puma
   rails
   sqlite3
-  tzinfo-data
 
 BUNDLED WITH
    2.2.22
