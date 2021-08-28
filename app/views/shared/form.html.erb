@@ -5,7 +5,7 @@
 
 <%= form_with model: @resource do |f| %>
   <% model.editable_columns.each do |column| %>
-    <%= f.label model.human_attribute_name(column.name) %>
+    <%= label_for(f, model, column) %>
     <%= input_for(f, column) %>
   <% end %>
   <br>

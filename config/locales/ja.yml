@@ -11,6 +11,8 @@ ja:
   label:
     edit: 編集
     destroy: 削除
+    null_false: (必須)
+    null_true: (任意)
   title:
     top: トップページ
     index: "%{model}一覧"

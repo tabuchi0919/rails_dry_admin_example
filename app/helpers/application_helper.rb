@@ -16,6 +16,12 @@ module ApplicationHelper
     end
   end
 
+  def label_for(form_builder, model, column)
+    form_builder.label(
+      model.human_attribute_name(column.name) + (column.null ? t('label.null_true') : t('label.null_false'))
+    )
+  end
+
   def input_for(form_builder, column)
     if column.name.end_with?("_id")
       return form_builder.select column.name, User.all.selections
