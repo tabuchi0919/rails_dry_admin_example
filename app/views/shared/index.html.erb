@@ -1,6 +1,7 @@
 <% model = @resources.model %>
 <% column_names = model.column_names %>
-<h1><%= model.model_name.human %>一覧</h1>
+<h1><%= t('title.index', model: model.model_name.human) %></h1>
+<%= link_to t('title.new', model: model.model_name.human), { action: :new } %>
 
 <table>
   <tr>

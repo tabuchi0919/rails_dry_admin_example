@@ -1,0 +1,12 @@
+<% model = @resource.class %>
+<% column_names = model.column_names %>
+<h1><%= t('title.new', model: model.model_name.human) %></h1>
+
+<%= form_with model: @resource do |f| %>
+  <% model.editable_columns.each do |column| %>
+    <%= f.label model.human_attribute_name(column.name) %>
+    <%= input_for(f, column) %>
+  <% end %>
+  <br>
+  <%= f.submit %>
+<% end %>

@@ -1,5 +1,13 @@
 ja:
-  top_page: トップページ
+  title:
+    top: トップページ
+    index: "%{model}一覧"
+    new: 新規%{model}
+  helpers:
+    submit:
+      create: 登録する
+      submit: 保存する
+      update: 更新する
   time:
     formats:
       default: "%Y/%m/%d %H:%M:%S"

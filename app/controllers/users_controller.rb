@@ -5,4 +5,9 @@ class UsersController < ApplicationController
     @resources = User.all
     render 'shared/index'
   end
+
+  def new
+    @resource = User.new
+    render 'shared/new'
+  end
 end
