@@ -6,4 +6,3 @@
     user.posts.find_or_create_by!(body: "Post#{j} by #{user.name}")
   end
 end
-

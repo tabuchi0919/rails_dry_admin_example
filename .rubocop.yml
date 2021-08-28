@@ -10,6 +10,8 @@ Layout/LineLength:
   Max: 80
   IgnoredPatterns: ["^ *#"]
 Metrics/AbcSize:
-  Max: 20
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
 Style/Documentation:
   Enabled: false

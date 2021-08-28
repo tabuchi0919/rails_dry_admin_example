@@ -4,9 +4,7 @@ module ApplicationHelper
   def format_for_table(resource, column)
     value = resource.send(column)
 
-    if column.end_with?("_id")
-      return User.find(value).display_name
-    end
+    return User.find(value).display_name if column.end_with?('_id')
 
     case value
     when Date, DateTime, Time
@@ -18,12 +16,13 @@ module ApplicationHelper
 
   def label_for(form_builder, model, column)
     form_builder.label(
-      model.human_attribute_name(column.name) + (column.null ? t('label.null_true') : t('label.null_false'))
+      model.human_attribute_name(column.name) +
+        (column.null ? t('label.null_true') : t('label.null_false'))
     )
   end
 
   def input_for(form_builder, column)
-    if column.name.end_with?("_id")
+    if column.name.end_with?('_id')
       return form_builder.select column.name, User.all.selections
     end
 
