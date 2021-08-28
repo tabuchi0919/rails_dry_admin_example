@@ -6,3 +6,8 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
+
+desc 'Lint fix with rubocop and erb_lint'
+task lint: :environment do
+  sh 'rubocop -A && erblint --lint-all -a'
+end
