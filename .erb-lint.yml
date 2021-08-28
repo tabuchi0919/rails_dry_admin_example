@@ -20,5 +20,7 @@ linters:
         Enabled: false
       Layout/TrailingWhitespace:
         Enabled: false
+      Lint/UselessAssignment:
+        Enabled: false
       Style/FrozenStringLiteralComment:
         Enabled: false

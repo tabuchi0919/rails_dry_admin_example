@@ -1,0 +1,22 @@
+<% model = @resources.model %>
+<% column_names = model.column_names %>
+<h1><%= model.model_name.human %>一覧</h1>
+
+<table>
+  <tr>
+    <% column_names.each do |column| %>
+      <th>
+        <%= model.human_attribute_name(column) %>
+      </th>
+    <% end %>
+  </tr>
+  <% @resources.each do |resource| %>
+    <tr>
+      <% column_names.each do |column| %>
+        <td>
+          <%= resource.send(column) %>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>

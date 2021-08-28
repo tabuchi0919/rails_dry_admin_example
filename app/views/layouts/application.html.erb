@@ -10,6 +10,18 @@
   </head>
 
   <body>
+    <header>
+      <nav>
+        <a href="<%= root_path %>">
+          <%= t(:top_page) %>
+        </a>
+      </nav>
+      <% ApplicationController::ADMIN_EDITABLE_CLASSES.each do |klass| %>
+        <nav>
+          <%= link_to "#{klass.model_name.human}一覧", klass %>
+        </nav>
+      <% end %>
+    <header>
     <%= yield %>
   </body>
 </html>

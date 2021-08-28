@@ -1,0 +1,12 @@
+ja:
+  top_page: トップページ
+  attributes:
+    id: ID
+    created_at: 作成日
+    updated_at: 更新日
+  activerecord:
+    models:
+      user: ユーザ
+    attributes:
+      user:
+        name: 名前
