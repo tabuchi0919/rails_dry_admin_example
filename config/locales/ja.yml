@@ -1,5 +1,8 @@
 ja:
   top_page: トップページ
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"
   attributes:
     id: ID
     created_at: 作成日

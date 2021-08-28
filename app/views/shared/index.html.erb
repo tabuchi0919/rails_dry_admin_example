@@ -14,7 +14,7 @@
     <tr>
       <% column_names.each do |column| %>
         <td>
-          <%= resource.send(column) %>
+          <%= format_for_table(resource.send(column)) %>
         </td>
       <% end %>
     </tr>
