@@ -28,6 +28,9 @@ module RailsDryAdminExample
 
     config.time_zone = ENV.fetch('TZ')
     config.i18n.default_locale = :ja
+    config.action_view.field_error_proc = proc { |html_tag, _instance|
+      html_tag
+    }
 
     # Don't generate system test files.
     config.generators.system_tests = nil

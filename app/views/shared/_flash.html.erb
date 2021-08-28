@@ -1,0 +1,21 @@
+<% if flash.notice %>
+  <blockquote>
+    <%= notice %>
+  </blockquote>
+<% end %>
+<% if flash.alert %>
+  <blockquote>
+    <%= alert %>
+  </blockquote>
+<% end %>
+<% if flash[:error] %>
+  <% flash[:error].each do |error_msg| %>
+    <blockquote>
+      <ul>
+        <li>
+          <%= error_msg %>
+        </li>
+      </ul>
+    </blockquote>
+  <% end %>
+<% end %>
