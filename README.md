@@ -9,3 +9,7 @@ Execute `docker-compose build` and `docker-compose run --rm web rails db:create 
 ## Develop
 
 Execute `docker-compose up` and access <http://localhost:33000>.
+
+## Lint
+
+Execute `docker-compose run --rm web rake lint`
