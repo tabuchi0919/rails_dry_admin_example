@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+    command: '/bin/sh -c "rm -f tmp/pids/server.pid && bundle exec rails s -b 0.0.0.0"'
+    environment:
+      - TZ=Asia/Tokyo
+    ports:
+      - 33000:3000
+    volumes:
+      - .:/myapp
