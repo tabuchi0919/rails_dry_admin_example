@@ -1,6 +1,7 @@
 <% model = @resource.class %>
 <% column_names = model.column_names %>
-<h1><%= t((@resource.persisted? ? 'title.edit' : 'title.new'), model: model.model_name.human) %></h1>
+<h1><%= t((@resource.persisted? ? 'title.edit' : 'title.new'),
+          model: model.model_name.human) %></h1>
 
 <%= form_with model: @resource do |f| %>
   <% model.editable_columns.each do |column| %>
