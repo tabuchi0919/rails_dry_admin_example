@@ -5,10 +5,6 @@ gem 'rails'
 gem 'sqlite3'
 gem 'puma'
 
-group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-end
-
 group :development do
   gem 'listen'
 end

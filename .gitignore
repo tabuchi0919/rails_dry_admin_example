@@ -21,6 +21,3 @@
 /tmp/pids/*
 !/tmp/pids/
 !/tmp/pids/.keep
-
-
-.byebug_history
