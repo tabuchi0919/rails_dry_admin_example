@@ -1,0 +1,24 @@
+EnableDefaultLinters: true
+glob: "app/views/**/*.erb"
+linters:
+  DeprecatedClasses:
+    enabled: true
+  ErbSafety:
+    enabled: true
+  Rubocop:
+    enabled: true
+    rubocop_config:
+      inherit_from:
+        - .rubocop.yml
+      Layout/EmptyLines:
+        Enabled: false
+      Layout/LineLength:
+        Enabled: false
+      Layout/InitialIndentation:
+        Enabled: false
+      Layout/TrailingEmptyLines:
+        Enabled: false
+      Layout/TrailingWhitespace:
+        Enabled: false
+      Style/FrozenStringLiteralComment:
+        Enabled: false

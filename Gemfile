@@ -8,6 +8,7 @@ gem 'rails'
 gem 'sqlite3'
 
 group :development do
+  gem 'erb_lint', require: false
   gem 'listen'
   gem 'rubocop', require: false
   gem 'rubocop-minitest', require: false
