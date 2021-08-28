@@ -38,6 +38,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    @resource = User.find(params[:id])
+    if @resource.destroy
+      redirect_to User, notice: t('flash.success.destroy')
+    else
+      flash.now[:error] = @resource.errors.full_messages
+      redirect_to User, alert: t('flash.failure.destroy')
+    end
+  end
+
   private
 
   def permitted_params

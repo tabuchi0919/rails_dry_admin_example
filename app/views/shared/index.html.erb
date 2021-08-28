@@ -21,7 +21,10 @@
         </td>
       <% end %>
       <td>
-        <%= link_to t('label.detail'), { action: :edit, id: resource } %>
+        <%= link_to t('label.edit'), { action: :edit, id: resource } %>
+      </td>
+      <td>
+        <%= link_to t('label.destroy'), resource, method: :delete %>
       </td>
     </tr>
   <% end %>

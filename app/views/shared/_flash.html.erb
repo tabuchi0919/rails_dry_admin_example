@@ -8,7 +8,7 @@
     <%= alert %>
   </blockquote>
 <% end %>
-<% if flash[:error] %>
+<% if flash[:error].present? %>
   <% flash[:error].each do |error_msg| %>
     <blockquote>
       <ul>

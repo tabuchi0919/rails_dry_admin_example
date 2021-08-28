@@ -9,7 +9,8 @@ ja:
       update: 更新に失敗しました
       destroy: 削除に失敗しました
   label:
-    detail: 詳細
+    edit: 編集
+    destroy: 削除
   title:
     top: トップページ
     index: "%{model}一覧"
