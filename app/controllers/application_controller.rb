@@ -2,11 +2,12 @@
 
 class ApplicationController < ActionController::Base
   ADMIN_EDITABLE_CLASSES = [
-    User
+    User,
+    Post
   ].freeze
 
   def index
-    @resources = model.all
+    @resources = model.all.includes(includes_associations)
     render 'shared/index'
   end
 
@@ -62,5 +63,9 @@ class ApplicationController < ActionController::Base
 
   def model
     raise NotInplementedError
+  end
+
+  def includes_associations
+    []
   end
 end

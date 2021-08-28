@@ -2,5 +2,7 @@
 
 Rails.application.routes.draw do
   root 'root#show'
-  resources :users, only: %i[index new create edit update destroy]
+  ApplicationController::ADMIN_EDITABLE_CLASSES.each do |klass|
+    resources klass.model_name.route_key, only: %i[index new create edit update destroy]
+  end
 end
