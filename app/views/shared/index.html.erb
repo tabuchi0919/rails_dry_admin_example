@@ -10,6 +10,8 @@
         <%= model.human_attribute_name(column) %>
       </th>
     <% end %>
+    <th></th>
+    <th></th>
   </tr>
   <% @resources.each do |resource| %>
     <tr>
@@ -18,6 +20,9 @@
           <%= format_for_table(resource.send(column)) %>
         </td>
       <% end %>
+      <td>
+        <%= link_to t('label.detail'), { action: :edit, id: resource } %>
+      </td>
     </tr>
   <% end %>
 </table>

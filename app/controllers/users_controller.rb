@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def new
     @resource = User.new
-    render 'shared/new'
+    render 'shared/form'
   end
 
   def create
@@ -18,7 +18,23 @@ class UsersController < ApplicationController
     else
       flash.now[:alert] = t('flash.failure.create')
       flash.now[:error] = @resource.errors.full_messages
-      render 'shared/new'
+      render 'shared/form'
+    end
+  end
+
+  def edit
+    @resource = User.find(params[:id])
+    render 'shared/form'
+  end
+
+  def update
+    @resource = User.find(params[:id])
+    if @resource.update(permitted_params)
+      redirect_to User, notice: t('flash.success.update')
+    else
+      flash.now[:alert] = t('flash.failure.update')
+      flash.now[:error] = @resource.errors.full_messages
+      render 'shared/form'
     end
   end
 
